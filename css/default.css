@@ -33,6 +33,7 @@ img{border:0px;  outline-width:0px;  vertical-align:top;}
 	position: relative;
 	 /*overflow:hidden;*/
 }
+body{min-width:1240px !important;}
 /*颜色*/
 .o-color{
 	color:#ff9e00;
