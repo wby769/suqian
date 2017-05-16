@@ -1,0 +1,1229 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>宿迁旅游网</title>
+	<link rel="shortcut icon" href="sq1.ico" />
+	<link rel="bookmark" href="sq1.ico"/>
+	<link rel="stylesheet" href="css/default.css">
+	<link rel="stylesheet" href="css/swiper.min.css">
+	<link rel="stylesheet" href="css/sq-index.css">
+	<link rel="stylesheet" href="http://at.alicdn.com/t/font_g1oa5r6uyfdsfw29.css">
+	<script type="text/javascript" src="js/jquery-1.10.2.min.js"></script>
+	<script src="js/swiper.min.js"></script>
+	<script type="text/javascript" src="js/index.js"></script>
+	<script type="text/javascript" src="js/superslide.2.1.js"></script>
+</head>
+<style>
+	.mainWrap .mainWrap-box{
+		display: block;
+	}
+	.mainIe .mainIe-box{
+		position: fixed;
+		width:100%;
+		height:100%;
+		background:#2a3c54;
+		display: block;
+	}
+	.mainIe .mainIe-box img{
+		width:60%;
+		display:block;
+		margin: 200px auto 0;
+	}
+</style>
+<!--除IE以外都可见-->
+<![if !IE]>
+<body class="mainWrap">
+<![endif]>
+<body  class="mainIe">
+	<div class="mainIe-box none">
+		<img src="imgs/browser.png" alt="">
+	</div>
+	<div class="mainWrap-box none">
+		<!--头部-->
+		<div class="header">
+			<!--最顶端-->
+			<div class="head-top">
+				<div class="header-top-container boxWrap">
+					<span class="header-top-container-left">宿迁旅行社欢迎您！</span>
+					<span class="right header-top-container-right o-color">
+						<i class="iconfont icon-xl"></i>
+						<i class="iconfont icon-qq1"></i>
+						<i class="iconfont icon-weixin1"></i>
+						<a href="javascript:;" id="login-btn" class="o-color">登录</a>
+						<a href="javascript:;" id="register-btn" class="o-color">注册</a>
+					</span>
+				</div>
+			</div>
+			<!--logo部分-->
+			<div class="head-bar">
+				<div class="header-bar-container boxWrap clearfix">
+					<img src="imgs/logo.jpg" alt="">
+					<div class="right header-bar-container-right">
+						<div class="left">
+							<p class="bar-info">
+								<i class="iconfont icon-dh"></i>客服时间：9:00-17:00
+							</p>
+							<p class="bar-phone o-color">0527-84338600</p>
+						</div>
+						<div class="right">
+							<p class="bar-info">
+								<i class="iconfont icon-xx"></i>网络报名更优惠
+							</p>
+							<p class="bar-phone o-color">137739977698（招商）</p>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!--菜单-->
+			<div class="menu-wrap">
+				<div class="menu-container boxWrap clearfix">
+					<ul>
+						<li style="background:#0cb2c5;"><a href="javascript:;">首页</a></li>
+						<li><a href="sq-ticket.html">景点门票</a></li>
+						<li><a href="sq-hotel.html">度假酒店</a></li>
+						<li><a href="sq-group.html">跟团游</a></li>
+						<li><a href="sq-free.html">自由行</a></li>
+						<li><a href="sq-cate.html">美食</a></li>
+						<li><a href="sq-specialty.html">特产</a></li>
+						<li><a href="sq-private.html">私人定制</a></li>
+						<li><a href="sq-strategy.html">旅游攻略</a></li>
+						<li><a href="sq-activity.html">活动中心</a></li>
+						<li><a href="sq-user.html">走进宿迁</a></li>
+					</ul>
+				</div>
+			</div>
+			<!--banner图-->
+			<div class="banner-wrap">
+				<div class="fullSlide">
+					<div class="bd">
+						<ul>
+							<li _src="url(imgs/banner1.jpg)" style="background:transparent center 0 no-repeat;"><a href="#"></a></li>
+							<li _src="url(imgs/banner2.jpg)" style="background:transparent center 0 no-repeat;"><a href="#"></a></li>
+							<li _src="url(imgs/banner3.jpg)" style="background:transparent center 0 no-repeat;"><a href="#"></a></li>
+						</ul>
+					</div>
+					<div class="hd"><ul></ul></div>
+					<span class="prev"></span>
+					<span class="next"></span>
+				</div>
+				<script type="text/javascript">
+					$(".fullSlide").hover(function(){
+						$(this).find(".prev,.next").stop(true, true).fadeTo("show", 0.5)
+					}, function(){
+						$(this).find(".prev,.next").fadeOut()
+					});
+					$(".fullSlide").slide({
+						titCell: ".hd ul",
+						mainCell: ".bd ul",
+						effect: "fold",
+						autoPlay: true,
+						autoPage: true,
+						trigger: "click",
+						startFun: function(i) {
+							var curLi = jQuery(".fullSlide .bd li").eq(i);
+							if ( !! curLi.attr("_src")) {
+								curLi.css("background-image", curLi.attr("_src")).removeAttr("_src")
+							}
+						}
+					});
+				</script>
+				<!--搜索内容主体-->
+				<div class="boxWrap search-wrap">
+					<div class="search-container">
+						<!--搜索菜单-->
+						<ul class="clearfix search-menu-box">
+							<li>
+								<a href="javascript:;">
+									<i class="iconfont icon-mp" style="color:#13c1d5;"></i>景区门票
+								</a>
+							</li>
+							<li>
+								<a href="javascript:;">
+									<i class="iconfont icon-hotel"></i>酒店住宿
+								</a>
+							</li>
+							<li>
+								<a href="javascript:;">
+									<i class="iconfont icon-jj"></i>景区+酒店
+								</a>
+							</li>
+							<li>
+								<a href="javascript:;">
+									<i class="iconfont icon-car"></i>当地用车
+								</a>
+							</li>
+							<li>
+								<a href="javascript:;">
+									<i class="iconfont icon-bd"></i>本地旅游
+								</a>
+							</li>
+						</ul>
+						<!--搜索输入框-->
+						<div class="search-inp-box">
+							<form action="">
+								<input type="text" class="search-inp" placeholder="请输入关键字">
+								<input type="submit" value="搜索" id="search-btn">
+							</form>
+						</div>
+						<!--热门景区-->
+						<P class="hot-box odd-ellipsis">
+							<label>热门景区：</label>
+							<a href="javascript:;">南山竹海</a>
+							<a href="javascript:;">窑湾古镇</a>
+							<a href="javascript:;">洪泽湖湿地公园</a>
+						</P>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!--主体内容-->
+		<div class="main-wrap boxWrap">
+			<!--内容一畅游宿迁-->
+			<div class="main-item1 clearfix" id="item1">
+				<img src="imgs/tt1.png" alt="">
+				<div class="line-box"></div>
+				<!--畅游宿迁内容左-->
+				<div class="item1-left">
+					<!--菜单栏-->
+					<ul class="nav-bar clearfix">
+						<li class="nav-active">
+							<a href="javascript:;" style="padding-left:0;">
+								<i class="iconfont icon-jingqu"></i>十大美景
+							</a>
+						</li>
+						<li>
+							<a href="javascript:;">
+								<i class="iconfont icon-lxs"></i>六大旅行社
+							</a>
+						</li>
+						<li>
+							<a href="javascript:;">
+								<i class="iconfont icon-ms"></i>八大美食
+							</a>
+						</li>
+						<li>
+							<a href="javascript:;">
+								<i class="iconfont icon-dy"></i>十佳导游
+							</a>
+						</li>
+						<li>
+							<a href="javascript:;"  class="no-bor">
+								<i class="iconfont icon-le"></i>农家乐
+							</a>
+						</li>
+					</ul>
+					<!--十大美景内容-->
+					<div class="swiper-container nav-container nav-container1">
+						<div class="swiper-wrapper">
+							<div class="swiper-slide">
+								<a href="javascript:;">
+									<img src="imgs/01.jpg" alt="">
+									<div class="nav-title">
+										<i>1</i>
+										<span>项王故里</span>
+									</div>
+								</a>
+							</div>
+							<div class="swiper-slide">
+								<a href="javascript:;">
+									<img src="imgs/06.jpg" alt="">
+									<div class="nav-title">
+										<i>6</i>
+										<span>克拉嗨谷</span>
+									</div>
+								</a>
+							</div>
+							<div class="swiper-slide">
+								<a href="javascript:;">
+									<img src="imgs/02.jpg" alt="">
+									<div class="nav-title">
+										<i>2</i>
+										<span>三台山</span>
+									</div>
+								</a>
+							</div>
+							<div class="swiper-slide">
+								<a href="javascript:;">
+									<img src="imgs/07.jpg" alt="">
+									<div class="nav-title">
+										<i>7</i>
+										<span>晓店温泉</span>
+									</div>
+								</a>
+							</div>
+							<div class="swiper-slide">
+								<a href="javascript:;">
+									<img src="imgs/03.jpg" alt="">
+									<div class="nav-title">
+										<i>3</i>
+										<span>雪枫公园</span>
+									</div>
+								</a>
+							</div>
+							<div class="swiper-slide">
+								<a href="javascript:;">
+									<img src="imgs/08.jpg" alt="">
+									<div class="nav-title">
+										<i>8</i>
+										<span>朱瑞将军纪念馆</span>
+									</div>
+								</a>
+							</div>
+							<div class="swiper-slide">
+								<a href="javascript:;">
+									<img src="imgs/04.jpg" alt="">
+									<div class="nav-title">
+										<i>4</i>
+										<span>乾隆行宫</span>
+									</div>
+								</a>
+							</div>
+							<div class="swiper-slide">
+								<a href="javascript:;">
+									<img src="imgs/09.jpg" alt="">
+									<div class="nav-title">
+										<i>9</i>
+										<span>宿迁欢乐岛</span>
+									</div>
+								</a>
+							</div>
+							<div class="swiper-slide">
+								<a href="javascript:;">
+									<img src="imgs/05.jpg" alt="">
+									<div class="nav-title">
+										<i>5</i>
+										<span>洪泽湖湿地</span>
+									</div>
+								</a>
+							</div>
+							<div class="swiper-slide">
+								<a href="javascript:;">
+									<img src="imgs/10.jpg" alt="">
+									<div class="nav-title">
+										<i>10</i>
+										<span>动漫国王</span>
+									</div>
+								</a>
+							</div>
+						</div>
+						<!-- 页码-->
+						<!--<div class="swiper-pagination pagination1"></div>-->
+					</div>
+					<!--六大旅行社景内容-->
+					<div class="nav-container none clearfix">
+						<div class="nav-container-item">
+							<a href="javascript:;">
+								<img src="imgs/11.jpg" alt="">
+								<div class="nav-title">
+									<i>1</i>
+									<span>金色之旅</span>
+								</div>
+							</a>
+						</div>
+						<div class="nav-container-item">
+							<a href="javascript:;">
+								<img src="imgs/12.jpg" alt="">
+								<div class="nav-title">
+									<i>2</i>
+									<span>新闻旅行社</span>
+								</div>
+							</a>
+						</div>
+						<div class="nav-container-item" style="margin-right: 0">
+							<a href="javascript:;">
+								<img src="imgs/13.jpg" alt="">
+								<div class="nav-title">
+									<i>3</i>
+									<span>宿迁康辉</span>
+								</div>
+							</a>
+						</div>
+						<div class="nav-container-item">
+							<a href="javascript:;">
+								<img src="imgs/14.jpg" alt="">
+								<div class="nav-title">
+									<i>4</i>
+									<span>中国国旅</span>
+								</div>
+							</a>
+						</div>
+						<div class="nav-container-item">
+							<a href="javascript:;">
+								<img src="imgs/15.jpg" alt="">
+								<div class="nav-title">
+									<i>5</i>
+									<span>山水旅行社</span>
+								</div>
+							</a>
+						</div>
+						<div class="nav-container-item" style="margin-right: 0">
+							<a href="javascript:;">
+								<img src="imgs/16.jpg" alt="">
+								<div class="nav-title">
+									<i>6</i>
+									<span>宿迁青旅</span>
+								</div>
+							</a>
+						</div>
+					</div>
+					<!--八大美食内容-->
+					<div class="swiper-container nav-container nav-container2">
+						<div class="swiper-wrapper">
+							<div class="swiper-slide">
+								<a href="javascript:;">
+									<img src="imgs/29.jpg" alt="">
+									<div class="nav-title">
+										<i>1</i>
+										<span>地锅小杂鱼</span>
+									</div>
+								</a>
+							</div>
+							<div class="swiper-slide">
+								<a href="javascript:;">
+									<img src="imgs/30.jpg" alt="">
+									<div class="nav-title">
+										<i>4</i>
+										<span>吊饼鲜河虾</span>
+									</div>
+								</a>
+							</div>
+							<div class="swiper-slide">
+								<a href="javascript:;">
+									<img src="imgs/31.jpg" alt="">
+									<div class="nav-title">
+										<i>2</i>
+										<span>富贵石榴花</span>
+									</div>
+								</a>
+							</div>
+							<div class="swiper-slide">
+								<a href="javascript:;">
+									<img src="imgs/32.jpg" alt="">
+									<div class="nav-title">
+										<i>5</i>
+										<span>虹枫软兜</span>
+									</div>
+								</a>
+							</div>
+							<div class="swiper-slide">
+								<a href="javascript:;">
+									<img src="imgs/33.jpg" alt="">
+									<div class="nav-title">
+										<i>3</i>
+										<span>清汤鱼面</span>
+									</div>
+								</a>
+							</div>
+							<div class="swiper-slide">
+								<a href="javascript:;">
+									<img src="imgs/34.jpg" alt="">
+									<div class="nav-title">
+										<i>6</i>
+										<span>四宝煲仔饭</span>
+									</div>
+								</a>
+							</div>
+							<div class="swiper-slide">
+								<a href="javascript:;">
+									<img src="imgs/35.jpg" alt="">
+									<div class="nav-title">
+										<i>4</i>
+										<span>泗洪大闸蟹</span>
+									</div>
+								</a>
+							</div>
+							<div class="swiper-slide">
+								<a href="javascript:;">
+									<img src="imgs/36.jpg" alt="">
+									<div class="nav-title">
+										<i>8</i>
+										<span>特色小吃</span>
+									</div>
+								</a>
+							</div>
+						</div>
+						<!-- 页码-->
+						<!--<div class="swiper-pagination pagination2"></div>-->
+					</div>
+					<!--十佳导游内容-->
+					<div class="nav-container none">
+						<div class="nav-container-item">
+							<a href="javascript:;">
+								<img src="imgs/23.jpg" alt="">
+								<div class="nav-title">
+									<i>1</i>
+									<span>初赛比拼</span>
+								</div>
+							</a>
+						</div>
+						<div class="nav-container-item">
+							<a href="javascript:;">
+								<img src="imgs/24.jpg" alt="">
+								<div class="nav-title">
+									<i>2</i>
+									<span>金牌导游</span>
+								</div>
+							</a>
+						</div>
+						<div class="nav-container-item" style="margin-right: 0">
+							<a href="javascript:;">
+								<img src="imgs/25.jpg" alt="">
+								<div class="nav-title">
+									<i>3</i>
+									<span>全市海选</span>
+								</div>
+							</a>
+						</div>
+						<div class="nav-container-item">
+							<a href="javascript:;">
+								<img src="imgs/26.jpg" alt="">
+								<div class="nav-title">
+									<i>4</i>
+									<span>十佳风采</span>
+								</div>
+							</a>
+						</div>
+						<div class="nav-container-item">
+							<a href="javascript:;">
+								<img src="imgs/27.jpg" alt="">
+								<div class="nav-title">
+									<i>5</i>
+									<span>导游风采</span>
+								</div>
+							</a>
+						</div>
+						<div class="nav-container-item" style="margin-right: 0">
+							<a href="javascript:;">
+								<img src="imgs/28.jpg" alt="">
+								<div class="nav-title">
+									<i>6</i>
+									<span>优秀导游</span>
+								</div>
+							</a>
+						</div>
+					</div>
+					<!--农家乐内容-->
+					<div class="nav-container none">
+						<div class="nav-container-item">
+							<a href="javascript:;">
+								<img src="imgs/17.jpg" alt="">
+								<div class="nav-title">
+									<i>1</i>
+									<span>碧水农庄</span>
+								</div>
+							</a>
+						</div>
+						<div class="nav-container-item">
+							<a href="javascript:;">
+								<img src="imgs/18.jpg" alt="">
+								<div class="nav-title">
+									<i>2</i>
+									<span>大禾庄园</span>
+								</div>
+							</a>
+						</div>
+						<div class="nav-container-item" style="margin-right: 0">
+							<a href="javascript:;">
+								<img src="imgs/19.jpg" alt="">
+								<div class="nav-title">
+									<i>3</i>
+									<span>农业生态园</span>
+								</div>
+							</a>
+						</div>
+						<div class="nav-container-item">
+							<a href="javascript:;">
+								<img src="imgs/20.jpg" alt="">
+								<div class="nav-title">
+									<i>4</i>
+									<span>平原林海景区</span>
+								</div>
+							</a>
+						</div>
+						<div class="nav-container-item">
+							<a href="javascript:;">
+								<img src="imgs/21.jpg" alt="">
+								<div class="nav-title">
+									<i>5</i>
+									<span>苏北花卉示范园</span>
+								</div>
+							</a>
+						</div>
+						<div class="nav-container-item" style="margin-right: 0">
+							<a href="javascript:;">
+								<img src="imgs/22.jpg" alt="">
+								<div class="nav-title">
+									<i>6</i>
+									<span>运河湾自然农院</span>
+								</div>
+							</a>
+						</div>
+					</div>
+					<script>
+						$(function(){
+							//十大美景
+							var swiper1 = new Swiper('.nav-container1', {
+								pagination: '.pagination1',
+								slidesPerView: 3,
+								slidesPerColumn: 2,
+								paginationClickable: true,//分页器按钮
+								spaceBetween: 25,
+								touchRatio : 0.5,//触摸距离与slide滑动距离的比率
+								speed:1000,//触摸滑动时释放至贴合的时间
+						//      autoplay: 3000,//自动切换的时间间隔
+						//    	autoplayDisableOnInteraction: false
+							});
+							// 八大美食
+							var swiper2 = new Swiper('.nav-container2', {
+								pagination: '.pagination2',
+								slidesPerView: 3,
+								slidesPerColumn: 2,
+								paginationClickable: true,//分页器按钮
+								spaceBetween: 25,
+								touchRatio : 0.5,//触摸距离与slide滑动距离的比率
+								speed:1000,//触摸滑动时释放至贴合的时间
+						// 		autoplay: 3000,//自动切换的时间间隔
+						//      autoplayDisableOnInteraction: false
+							});
+						})
+					</script>
+				</div>
+				<!--畅游宿迁内容右-->
+				<div class="item1-right">
+					<a href="javascript:;">
+						<img src="imgs/item1-r1.jpg" alt="">
+					</a>
+					<a href="javascript:;">
+						<img src="imgs/item1-r2.jpg" alt="">
+					</a>
+					<a href="javascript:;">
+						<img src="imgs/item1-r3.jpg" alt="">
+					</a>
+				</div>
+			</div>
+			<!--内容二限时特惠-->
+			<div class="main-item2 clearfix" id="item2">
+				<img src="imgs/tt2.png" alt="">
+				<div class="line-box"></div>
+				<div class="boxWrap item2-container">
+					<div class="swiper-container tehui-container">
+						<div class="swiper-wrapper">
+							<div class="swiper-slide item2-container-item">
+								<img src="imgs/37.jpg" alt="">
+								<p class="odd-ellipsis">黄山/凤凰源/归园汽车3日游</p>
+								<span class="red-color price"><span style="font-size:16px">￥</span>110.00</span>
+								<span class="time right" id="timer1"></span>
+							</div>
+							<div class="swiper-slide item2-container-item">
+								<img src="imgs/38.jpg" alt="">
+								<p class="odd-ellipsis">宿迁到黄山-芙蓉谷-屯溪老街特价汽车3日游</p>
+								<span class="red-color price"><span style="font-size:16px">￥</span>780.00</span>
+								<span class="time right" id="timer2"></span>
+							</div>
+							<div class="swiper-slide item2-container-item">
+								<img src="imgs/39.jpg" alt="">
+								<p class="odd-ellipsis">宿迁到北京汽车五日游</p>
+								<span class="red-color price"><span style="font-size:16px">￥</span>590.00</span>
+								<span class="time right" id="timer3"></span>
+							</div>
+							<div class="swiper-slide item2-container-item">
+								<img src="imgs/40.jpg" alt="">
+								<p class="odd-ellipsis">宿迁到黄山-黄山漂流-宏村</p><div></div>
+								<span class="red-color price"><span style="font-size:16px">￥</span>170.00</span>
+								<span class="time right" id="timer4"></span>
+							</div>
+							<div class="swiper-slide item2-container-item">
+								<img src="imgs/41.jpg" alt="">
+								<p class="odd-ellipsis">克拉嗨谷主题乐园</p><div></div>
+								<span class="red-color price"><span style="font-size:16px">￥</span>180.00</span>
+								<span class="time right" id="timer5"></span>
+							</div>
+							<div class="swiper-slide item2-container-item">
+								<img src="imgs/42.jpg" alt="">
+								<p class="odd-ellipsis">宿迁欢乐岛</p><div></div>
+								<span class="red-color price"><span style="font-size:16px">￥</span>120.00</span>
+								<span class="time right" id="timer6"></span>
+							</div>
+						</div>
+						<!-- Add Arrows -->
+						<div class="swiper-button-next"></div>
+						<div class="swiper-button-prev"></div>
+					</div>
+					<script>
+						var swiper = new Swiper('.tehui-container', {
+							nextButton: '.swiper-button-next',
+							prevButton: '.swiper-button-prev',
+							slidesPerView: 4,
+							paginationClickable: true,
+							spaceBetween:25,
+							speed:1000,
+							autoplay: 3000,
+							autoplayDisableOnInteraction: false
+						});
+					</script>
+				</div>
+			</div>
+			<!--内容三景区门票-->
+			<div class="main-item3 clearfix" id="item3">
+				<img src="imgs/tt3.png" alt="">
+				<a class="b-color more-btn" href="sq-ticket.html">MORE></a>
+				<div class="line-box"></div>
+				<div class="boxWrap item3-container clearfix" style="height: 400px">
+					<div class="ticket-banner-box">
+						<div class="swiper-container ticket-container">
+							<div class="swiper-wrapper">
+								<div class="swiper-slide"><img src="imgs/ticket-ban1.jpg"></div>
+								<div class="swiper-slide"><img src="imgs/ticket-ban2.jpg"></div>
+								<div class="swiper-slide"><img src="imgs/ticket-ban3.jpg"></div>
+							</div>
+							<div class="swiper-pagination ticket-pagination"></div>
+						</div>
+					</div>
+					<script>
+						var swiper = new Swiper('.ticket-container', {
+							pagination: '.ticket-pagination',
+							paginationClickable: true,
+							touchRatio : 0.5,
+							loop:true,
+							speed:500,
+							autoplay: 2500,
+							autoplayDisableOnInteraction: false
+						});
+					</script>
+					<!--4个门票景点-->
+					<div class="ticket-container-m">
+						<div class="t-list bor-b bor-r">
+							<a href="javascript:;">
+								<img src="imgs/ticket1.jpg" alt="">
+								<p> 三台山</p>
+							</a>
+						</div>
+						<div class="t-list bor-b">
+							<a href="javascript:;">
+								<img src="imgs/ticket2.jpg" alt="" class="left-p">
+								<p class="left-p"> 雪枫公园</p>
+							</a>
+						</div>
+						<div class="t-list bor-r">
+							<a href="javascript:;">
+								<img src="imgs/ticket3.jpg" alt="" class="top-p">
+								<p> 洪泽湖湿地</p>
+							</a>
+						</div>
+						<div class="t-list">
+							<a href="javascript:;">
+								<img src="imgs/ticket4.jpg" alt="" class="top-p left-p">
+								<p class="left-p"> 乾隆行宫</p>
+							</a>
+						</div>
+					</div>
+					<!--3个门票景点-->
+					<div class="ticket-container-r">
+						<a href="javascript:;">
+							<img src="imgs/ticket5.jpg" alt="">
+						</a>
+						<a href="javascript:;">
+							<img src="imgs/ticket6.jpg" alt="">
+						</a>
+						<a href="javascript:;">
+							<img src="imgs/ticket7.jpg" alt="">
+						</a>
+					</div>
+				</div>
+			</div>
+			<!--内容四度假酒店-->
+			<div class="main-item4 clearfix" id="item4">
+				<img src="imgs/tt4.png" alt="">
+				<ul class="nav-bar clearfix" style="width:280px">
+					<li class="nav-active">住-豪华</li>
+					<li>住-高档</li>
+					<li>住-经济</li>
+				</ul>
+				<a class="b-color more-btn" href="sq-hotel.html">MORE></a>
+				<div class="line-box"></div>
+				<div class="nav-container">
+					<div class="h-right clearfix" style="width:284px;float:left;">
+						<div class="h-list h-bottom">
+							<a href="javascript:;">
+								<img src="imgs/hotel1.jpg" alt="">
+								<p>宿迁星辰国际酒店</p>
+							</a>
+						</div>
+						<div class="h-list">
+							<a href="javascript:;">
+								<img src="imgs/hotel4.jpg" alt="">
+								<p>宿迁运河金陵大饭店</p>
+							</a>
+						</div>
+					</div>
+					<div class="h-right clearfix" style="width:281px;float:left;">
+						<div class="h-list h-bottom">
+							<a href="javascript:;">
+								<img src="imgs/hotel2.jpg" alt="">
+								<p>宿迁星蓝波湾假日酒店</p>
+							</a>
+						</div>
+						<div class="h-list h-right">
+							<a href="javascript:;">
+								<img src="imgs/hotel6.jpg" alt="">
+								<p>宿迁尚阳湖酒店</p>
+							</a>
+						</div>
+					</div>
+					<div class="h-right clearfix" style="width:281px;float:left;">
+						<div class="h-list h-bottom">
+							<a href="javascript:;">
+								<img src="imgs/hotel3.jpg" alt="">
+								<p>宿迁枫华丽致酒店</p>
+							</a>
+						</div>
+						<div class="h-list">
+							<a href="javascript:;">
+								<img src="imgs/hotel7.jpg" alt="">
+								<p>宿迁中德度假村</p>
+							</a>
+						</div>
+					</div>
+					<div class="clearfix" style="width:284px;float:left;">
+						<div class="h-list h-bottom">
+							<a href="javascript:;">
+								<img src="imgs/hotel4.jpg" alt="">
+								<p>宿迁运河金陵大饭店</p>
+							</a>
+						</div>
+						<div class="h-list">
+							<a href="javascript:;">
+								<img src="imgs/hotel8.jpg" alt="">
+								<p>沐阳汇峰大饭店</p>
+							</a>
+						</div>
+					</div>
+				</div>
+				<div class="nav-container none">
+					<a href="javascript:;">
+						<img src="imgs/45.jpg" alt="">
+					</a>
+				</div>
+				<div class="nav-container none">
+					<a href="javascript:;">
+						<img src="imgs/46.jpg" alt="">
+					</a>
+				</div>
+			</div>
+			<!--内容五跟团游-->
+			<div class="main-item5 clearfix" id="item5">
+				<img src="imgs/tt5.png" alt="">
+				<ul class="nav-bar clearfix" style="width: 720px">
+					<li class="nav-active">亲子体验</li>
+					<li>毕业季</li>
+					<li>赏花踏春季</li>
+					<li>主题乐园</li>
+					<li>温泉季</li>
+					<li>乡村情怀</li>
+					<li>热门推荐</li>
+					<li>风景名胜</li>
+				</ul>
+				<a class="b-color more-btn" href="sq-group.html">MORE></a>
+				<div class="line-box"></div>
+				<div class="nav-container">
+					<div class="tc-list h-list" style="margin-right:21px">
+						<a href="javascript:;">
+							<img src="imgs/gt1.jpg" alt="">
+							<p>胡泽湖湿地公园<span class="right" style="margin-right:10px">￥99人/起</span></p>
+						</a>
+					</div>
+					<div class="tc-list h-list" style="margin-right:21px">
+						<a href="javascript:;">
+							<img src="imgs/gt2.jpg" alt="">
+							<p>江苏三台山国家森林公园<span class="right" style="margin-right:10px">￥50人/起</span></p>
+						</a>
+					</div>
+					<div class="tc-list h-list">
+						<a href="javascript:;">
+							<img src="imgs/gt3.jpg" alt="">
+							<p>宿豫运河湾森林动物园<span class="right" style="margin-right:10px">￥25人/起</span></p>
+						</a>
+					</div>
+				</div>
+			</div>
+			<!--内容六自由行-->
+			<div class="main-item6 clearfix" id="item6">
+				<img src="imgs/tt6.png" alt="">
+				<ul class="nav-bar clearfix" style="width: 510px">
+					<li class="nav-active">全部</li>
+					<li>景+景</li>
+					<li>景+酒</li>
+					<li>优惠</li>
+					<li>推荐</li>
+					<li>限时特价</li>
+					<li>直通车</li>
+				</ul>
+				<a class="b-color more-btn" href="sq-free.html">MORE></a>
+				<div class="line-box"></div>
+				<div class="nav-container">
+					<div style="margin-bottom:20px" class="clearfix">
+						<div class="tc-list h-list" style="margin-right:18px">
+							<a href="javascript:;">
+								<img src="imgs/zy4.jpg" alt="">
+								<p>三台山森林公园<span class="right" style="margin-right:10px">￥120人/起</span></p>
+							</a>
+						</div>
+						<div class="tc-list h-list" style="margin-right:18px">
+							<a href="javascript:;">
+								<img src="imgs/zy1.jpg" alt="">
+							</a>
+						</div>
+						<div class="tc-list h-list" style="margin-right:18px">
+							<a href="javascript:;">
+								<img src="imgs/zy2.jpg" alt="">
+							</a>
+						</div>
+						<div class="tc-list h-list">
+							<a href="javascript:;">
+								<img src="imgs/zy5.jpg" alt="">
+								<p>宿迁晓店温泉<span class="right" style="margin-right:10px">￥108人/起</span></p>
+							</a>
+						</div>
+					</div>
+					<div class="clearfix">
+						<div class="tc-list h-list" style="margin-right:18px">
+							<a href="javascript:;">
+								<img src="imgs/zy3.jpg" alt="">
+							</a>
+						</div>
+						<div class="tc-list h-list">
+							<a href="javascript:;">
+								<img src="imgs/zy6.jpg" alt="">
+								<p>宿迁晓店温泉<span class="right" style="margin-right:10px">￥108人/起</span></p>
+							</a>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!--内容七美食-->
+			<div class="main-item7 clearfix" id="item7">
+				<img src="imgs/tt7.png" alt="">
+				<ul class="nav-bar clearfix" style="width: 310px">
+					<li class="nav-active">户鲜美食</li>
+					<li>相府家宴</li>
+					<li>风味小吃</li>
+				</ul>
+				<a class="b-color more-btn" href="sq-cate.html">MORE></a>
+				<div class="line-box"></div>
+				<div class="nav-container">
+					<div class="tc-list h-list" style="margin-right:25px">
+						<a href="javascript:;">
+							<img src="imgs/ms1.jpg" alt="">
+							<p>蒜泥龙虾</p>
+						</a>
+					</div>
+					<div class="tc-list h-list" style="margin-right:25px">
+						<a href="javascript:;">
+							<img src="imgs/ms2.jpg" alt="">
+							<p>孔雀开鱼</p>
+						</a>
+					</div>
+					<div class="tc-list h-list">
+						<a href="javascript:;">
+							<img src="imgs/ms3.jpg" alt="">
+							<p>霸王金鼎品三鲜</p>
+						</a>
+					</div>
+				</div>
+			</div>
+			<!--内容八特产-->
+			<div class="main-item8 clearfix" id="item8">
+				<img src="imgs/tt8.png" alt="">
+				<a class="b-color more-btn" href="sq-specialty.html">MORE></a>
+				<div class="line-box"></div>
+				<div class="nav-container">
+					<div class="tc-list h-list" style="margin-right:21px">
+						<a href="javascript:;">
+							<img src="imgs/tc3.jpg" alt="">
+							<p>荷叶茶</p>
+						</a>
+					</div>
+					<div class="tc-list h-list" style="margin-right:21px">
+						<a href="javascript:;">
+							<img src="imgs/tc1.jpg" alt="">
+							<p>梨木茶具</p>
+						</a>
+					</div>
+					<div class="tc-list h-list">
+						<a href="javascript:;">
+							<img src="imgs/tc2.jpg" alt="">
+							<p>洛画</p>
+						</a>
+					</div>
+				</div>
+			</div>
+			<!--内容九旅游资讯-游记攻略-->
+			<div class="main-item9 clearfix">
+				<!--旅游咨询-->
+				<div class="item9-left left">
+					<div class="title">
+						<i class="iconfont icon-zx"></i>旅游资讯
+						<a class="b-color more-btn" href="sq-activity.html">MORE&gt;</a>
+					</div>
+					<div class="item9-left-content clearfix">
+						<a href="javascript:;">
+							<img src="imgs/51.jpg" alt="" class="left">
+							<div class="left item9-left-content-info">
+								<h4 class="even-ellipsis">一女，坦桑尼亚，短裙挑战乞力马扎罗</h4>
+								<p>由于有太多的话想说，太多事想分享!</p>
+							</div>
+						</a>
+					</div>
+					<div id="scrollDiv" style="overflow:hidden;height:70px;">
+						<ul>
+							<li class="item9-left-list">
+								<a href="javascript:;">
+									<span class="b-color odd-ellipsis">[资讯] </span>五月~亲子游毛里求斯七天五晚+LUX+迷你敞篷两天自驾
+								</a>
+							</li>
+							<li class="item9-left-list">
+								<a href="javascript:;">
+									<span class="b-color odd-ellipsis">[资讯] </span>史上最美配图阳朔自助游攻略(已完结)
+								</a>
+							</li>
+							<li class="item9-left-list">
+								<a href="javascript:;">
+									<span class="b-color odd-ellipsis">[资讯] </span>洪泽湖湿地公园积极开展营销
+								</a>
+							</li>
+							<li class="item9-left-list">
+								<a href="javascript:;">
+									<span class="b-color odd-ellipsis">[资讯] </span>市旅游局全力备战三台山开园
+								</a>
+							</li>
+						</ul>
+					</div>
+					<script type="text/javascript">
+						// 旅游资讯滚动
+						function AutoScroll(obj){
+							$(obj).find("ul:first").animate({
+								marginTop:"-34px"
+							},600,function(){
+								$(this).css({marginTop:"0px"}).find("li:first").appendTo(this);
+							});
+						}
+						$(document).ready(function(){
+							setInterval('AutoScroll("#scrollDiv")',2500)
+						});
+					</script>
+				</div>
+				<!--游记攻略-->
+				<div class="item9-right right">
+					<div class="title">
+						<i class="iconfont icon-gl"></i>游记攻略
+						<a class="b-color more-btn" href="sq-strategy.html">MORE&gt;</a>
+					</div>
+					<div class="item9-left-content clearfix">
+						<a href="javascript:;">
+							<img src="imgs/52.jpg" alt="" class="left">
+							<div class="left item9-left-content-info">
+								<h4 class="even-ellipsis">高平定林寺-七佛山下蝴蝶舞</h4>
+								<p>2017/3/10</p>
+							</div>
+						</a>
+					</div>
+					<div class="item9-left-content clearfix">
+						<a href="javascript:;">
+							<img src="imgs/53.jpg" alt="" class="left">
+							<div class="left item9-left-content-info">
+								<h4 class="even-ellipsis">我画中的八月黄姚－美丽桂林</h4>
+								<p>2017/1/14</p>
+							</div>
+						</a>
+					</div>
+					<div class="item9-left-content clearfix">
+						<a href="javascript:;">
+							<img src="imgs/54.jpg" alt="" class="left">
+							<div class="left item9-left-content-info">
+								<h4 class="even-ellipsis">致旧日情书之：带我去看星星好吗</h4>
+								<p>2017/2/10</p>
+							</div>
+						</a>
+					</div>
+					<div class="item9-left-content clearfix">
+						<a href="javascript:;">
+							<img src="imgs/55.jpg" alt="" class="left">
+							<div class="left item9-left-content-info">
+								<h4 class="even-ellipsis">云之上 仰望另一个香巴拉---属于我们的北疆</h4>
+								<p>2017/3/10</p>
+							</div>
+						</a>
+					</div>
+				</div>
+			</div>
+			<!--内容十 入口补充-->
+			<div class="main-item10">
+				<div class="swiper-container enter-container">
+					<div class="swiper-wrapper">
+						<div class="swiper-slide">
+							<img src="imgs/q1.jpg" alt="">
+						</div>
+						<div class="swiper-slide">
+							<img src="imgs/q2.jpg" alt="">
+						</div>
+						<div class="swiper-slide">
+							<img src="imgs/q3.jpg" alt="">
+						</div>
+						<div class="swiper-slide">
+							<img src="imgs/q4.jpg" alt="">
+						</div>
+						<div class="swiper-slide">
+							<img src="imgs/q5.jpg" alt="">
+						</div>
+					</div>
+				</div>
+				<div class="swiper-button-next"></div>
+				<div class="swiper-button-prev"></div>
+				<script>
+                    var swiper = new Swiper('.enter-container', {
+                        nextButton: '.swiper-button-next',
+                        prevButton: '.swiper-button-prev',
+                        slidesPerView: 4,
+                        paginationClickable: true,
+                        spaceBetween:25,
+                        speed:1000,
+                        autoplay: 3000,
+                        loop:true,
+                        autoplayDisableOnInteraction: false
+                    });
+				</script>
+			</div>
+			<!--左侧悬浮菜单-->
+			<div id="menu" class="none">
+				<ul>
+					<li><a href="#item1">畅游</a></li>
+					<li><a href="#item2">抢购</a></li>
+					<li><a href="#item3">嗨玩</a></li>
+					<li><a href="#item4">住宿</a></li>
+					<li><a href="#item5">游玩</a></li>
+					<li><a href="#item6">出行</a></li>
+					<li><a href="#item7">美食</a></li>
+					<li><a href="#item8" style="border-bottom: 0;">购物</a></li>
+				</ul>
+			</div>
+			<!--右侧悬浮功能-->
+			<div id="fast-bar" class="none">
+				<ul>
+					<li>
+						<a href="javascript:;">
+							<i class="iconfont icon-qq"></i>
+							<p>QQ</p>
+						</a>
+					</li>
+					<li>
+						<a href="javascript:;">
+							<i class="iconfont icon-kefu"></i>
+							<p>客服</p>
+						</a>
+					</li>
+					<li>
+						<a href="javascript:;">
+							<i class="iconfont icon-weixin"></i>
+							<p>微信</p>
+						</a>
+					</li>
+					<li>
+						<a href="javascript:;" id="toTop">
+							<i class="iconfont icon-top"></i>
+							<p>顶部</p>
+						</a>
+					</li>
+				</ul>
+			</div>
+		</div>
+		<!--尾部-->
+		<div class="footer">
+			<div class="boxWrap foot-main">
+				<div class="foot-list" style="margin-left:70px">
+					<h3>宿迁景区</h3>
+					<p><a href="javascript:;">项王故里</a></p>
+					<p><a href="javascript:;">三台山</a></p>
+					<p><a href="javascript:;">雪枫公园</a></p>
+					<p><a href="javascript:;">洪泽湖湿地</a></p>
+					<p><a href="javascript:;">克拉嗨谷</a></p>
+					<p><a href="javascript:;">更多景区>></a></p>
+				</div>
+				<div class="foot-list">
+					<h3>宿迁消费</h3>
+					<p><a href="javascript:;">美食</a></p>
+					<p><a href="javascript:;">特产</a></p>
+					<p><a href="javascript:;">娱乐</a></p>
+				</div>
+				<div class="foot-list">
+					<h3>宿迁交通 </h3>
+					<p><a href="javascript:;">飞机</a></p>
+					<p><a href="javascript:;">火车</a></p>
+					<p><a href="javascript:;">汽车</a></p>
+					<p><a href="javascript:;">自驾路线</a></p>
+					<p><a href="javascript:;">市区交通</a></p>
+					<p><a href="javascript:;">景区交通</a></p>
+				</div>
+				<div class="foot-list">
+					<h3>智慧宿迁</h3>
+					<p><a href="javascript:;">虚拟旅游</a></p>
+					<p><a href="javascript:;">景点在线摄像头</a></p>
+					<p><a href="javascript:;">高清图库</a></p>
+					<p><a href="javascript:;">旅游人数统计</a></p>
+					<p><a href="javascript:;">旅游人数预测</a></p>
+				</div>
+				<div class="foot-list">
+					<h3>宿迁其他</h3>
+					<p><a href="javascript:;">官方动态</a></p>
+					<p><a href="javascript:;">旅游攻略</a></p>
+					<p><a href="javascript:;">用户投诉</a></p>
+					<p><a href="javascript:;">旅游论坛</a></p>
+				</div>
+				<div class="foot-list" style="text-align: center">
+					<img src="imgs/er1.jpg" alt="">
+					<p>官方公众号</p>
+				</div>
+				<div class="foot-list" style="text-align: center">
+					<img src="imgs/er1.jpg" alt="">
+					<p>官方微博</p>
+				</div>
+				<img src="imgs/foot1.jpg" alt="" style="margin-top:30px">
+			</div>
+			<div class="foot-btm">
+				<p>Copyright：宿迁旅行社 技术支持：溜溜地球 宿迁旅行社</p>
+				<p>ICP证：苏ICP备15001493号-1 旅游诚信经营承诺书管理员入口</p>
+			</div>
+		</div>
+	</div>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
